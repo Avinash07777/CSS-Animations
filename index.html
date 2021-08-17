@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>CSS Animations</title>
+        <style>
+            .c{
+                width: 200px;
+                height: 200px;
+                background:red;
+                margin:45px auto;
+                animation-name: box1;
+                animation-duration: 10s;
+                animation-timing-function:linear;
+                animation-iteration-count: infinite;
+                border: solid  10px;
+                border-radius:10px;
+                font-size: large;
+                font-weight: bold;
+                font-style: italic;
+
+            }
+            @keyframes box1{
+             0%{
+                transform: rotateZ(0deg);
+             }
+             100%{
+                 transform: rotateZ(360deg);
+             }
+            }
+            .box3{
+                width: 200px;
+                height: 200px;
+               background-color: blue;
+               animation-name: box2;
+               animation-duration: 2s;
+               animation-direction: alternate;
+               animation-timing-function:linear;
+               animation-iteration-count: infinite;
+               border-radius: 12px;
+               border: solid 12px;
+            }
+            @keyframes box2{
+                0%{
+                    transform: translateX(0px);
+                }
+                25%{
+                    background-color: gold;
+                }
+                50%{
+                    background-color:silver;
+                }
+                75%{
+                    background-color:green;
+                }
+                100%{
+                    transform: translate(1087px);
+                }
+            }
+            .box2{
+                background-color: yellow;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="c box1">1st box</div>
+        <div class="c box2">2nd box</div>
+        <div class="box3">3rd box</div>
+    </body>
+</html>
